@@ -23,7 +23,7 @@
 	"type": "module",
 	"main": "dist/index.mjs",
 	"scripts": {
-		"build": "npx ncc build ./src/index.ts && mv ./dist/index.js ./dist/index.mjs",
+		"build": "npx ncc build ./src/index.ts --target es2020 -o dist -m && mv dist/index.js dist/index.mjs",
 		"test": "vitest",
 		"format": "prettier --write .",
 		"check": "prettier --check ."
